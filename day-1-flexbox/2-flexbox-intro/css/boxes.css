@@ -1,16 +1,30 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 }
+
 ul {
+	display: flex;
+	border: 5px dotted red;
+	/*flex-direction: row;
+	flex-wrap: nowrap;*/
+	flex-flow: row wrap; /* Short land for flex-direction & flex-flow. */
+	align-items: center;
+	justify-content: center;
 	list-style-type: none;
-	padding: 0;
 	margin: 0;
-	border: 1px dotted red;
+	padding: 0;
 }
+
 li {
-	border: 1px solid #999;
+	border: 5px solid #999;
 	margin: 0.5em;
 	padding: 0.5em;
+}
+
+.flex2 {
+	border: 5px dotted blue;
+	order: 2;
+	flex: 2 1 25%;
 }
 
 
