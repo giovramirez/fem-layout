@@ -8,8 +8,8 @@ html {
 body {
 	font-family: "Cabin", Arial, Geneva, sans-serif;
 	background-image: url(../img/clouds.png);
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Niconne', cursive;
@@ -94,7 +94,7 @@ div.row {
   padding-left: 0.5em;
 }
 [class*='sidebar'] img {
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0 0 10px 10px;
   width: 100%;
   max-width: 250px;
   display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
@@ -106,7 +106,7 @@ div.row {
   background-color: #c80060;
 }
 blockquote {
-  padding: 0em;
+  padding: 0;
   margin: 0;
 }
 blockquote p, 
@@ -183,7 +183,7 @@ aside[class*='sidebar'] {
     padding: 0;
   }
   nav a {
-      padding: 0em 1em 0em 1em;
+      padding: 0 1em 0 1em;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -232,6 +232,6 @@ aside[class*='sidebar'] {
     padding: 0;
   }
   nav a {
-      padding: 0em 1em 0em 1em;
+      padding: 0 1em 0 1em;
   }
 }
