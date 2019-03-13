@@ -66,9 +66,11 @@ nav a:hover {
     clear:both;
 }
 div.row {
+  display: flex;
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  flex-flow: row wrap;
   padding: 1em;
 }
 .floatleft {
@@ -139,39 +141,24 @@ footer a {
 [class*=‘col’] {
   margin-left: 0;
 }
-  .col-1,
-  .col-2,
-  .col-3,
-  .col-4,
-  .col-1-2,
-  .col-1-4  {
-  width: 96.66666%;
-}
-
-
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 550px) and (max-width: 849px) { 
+@media (min-width: 480px) {
   .wrapper {
       width: 97%;
       max-width: 767px;
       float: none;
   }
- .col-1,
- .col-2,
- .col-1-2,
-.col-3,
-.col-4,
-.col-1-4 {
-  width: 96.66666%;
-}
+  .col-1 {
+    flex: 0 0 44%;
+  }
+
+  .col-3-1 {
+    flex: 0 0 92%;
+  }
+
 div.row {
   padding: 0 2em;
-}
-aside[class*='sidebar'] {
-  float: left;
-  width: 47%;
-  margin-right: 3%;
 }
 
   nav li,
@@ -187,11 +174,19 @@ aside[class*='sidebar'] {
   }
 }
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 850px) { 
+@media (min-width: 768px) {
   .wrapper {
       width: 97%;
       max-width: 1200px;
       float: none;
+  }
+
+  .col-1 {
+    flex: 0 0 20%;
+  }
+
+  .col-3-1 {
+    flex: 0 0 72%;
   }
 
   [class*='col-'] {
