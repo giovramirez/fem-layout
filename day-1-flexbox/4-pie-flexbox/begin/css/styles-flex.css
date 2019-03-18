@@ -58,35 +58,35 @@ nav a:hover {
   color:#00c4c7;
 }
 
-
-.row:before, 
-.row:after {
-    content:"";
-    display: table;
-    clear:both;
-}
 div.row {
   display: flex;
   background-color: #fff6e0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   flex-flow: row wrap;
-  padding: 1em;
 }
+
+[class*='col-'] {
+  flex: 0 0 100%;
+  padding: 2%;
+}
+
 .floatleft {
   float: left;
   margin: 0 1em 1em 0;
 }
+
 .floatright {
   float: right;
   margin: 0 0 1em 1em;
 }
+
 [class*='sidebar'] {
   border: 1px solid #00c4c7;
   border-radius: 10px;
-  margin-bottom: 1em;
-  margin-top: 2.5em;
+  margin: 2% 0;
 }
+
 [class*='sidebar'] h3 {
   margin: 0;
   color: white;
@@ -95,71 +95,72 @@ div.row {
   border-top-right-radius: 10px;
   padding-left: 0.5em;
 }
+
 [class*='sidebar'] img {
   border-radius: 0 0 10px 10px;
   width: 100%;
   max-width: 250px;
   display: block; /* without this, there is a gap between the image and border -- space for descenders in text, for inline elements */
-} 
+}
+
 .sidebar-secondary {
   border-color: #c80060;
 }
+
 .sidebar-secondary h3 {
   background-color: #c80060;
 }
+
 blockquote {
   padding: 0;
   margin: 0;
 }
+
 blockquote p, 
 blockquote cite {
   padding: 0 1em;
 }
+
 blockquote cite {
   text-transform: uppercase;
   font-style: normal;
   padding-bottom: 1em;
   display: block;
 }
+
 footer {
   background-color: #00CDD1;
   color: white;
   clear: both;
   margin: 0 0.5em 3em 0.5em;
 }
+
 footer p {
   text-align: center;
 }
+
 footer img {
   width: 52px;
 }
+
 footer a {
   color: white;
   text-decoration: none;
 }
 
-[class*=‘col’] {
-  margin-left: 0;
-}
-
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .wrapper {
       width: 97%;
-      max-width: 767px;
-      float: none;
-  }
-  .col-1 {
-    flex: 0 0 44%;
   }
 
-  .col-3-1 {
-    flex: 0 0 92%;
+  .col-2 {
+    flex: 0 0 47%;
   }
 
-div.row {
-  padding: 0 2em;
-}
+  [class*='sidebar'] {
+    margin-left: 2%;
+  }
 
   nav li,
   nav li:nth-child(even),
@@ -169,55 +170,39 @@ div.row {
     width: auto;
     padding: 0;
   }
+
   nav a {
       padding: 0 1em 0 1em;
   }
 }
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 768px) {
+
+/* Large devices (large desktops, 991px and up) */
+@media (min-width: 991px) {
   .wrapper {
-      width: 97%;
-      max-width: 1200px;
-      float: none;
+    max-width: 1200px;
   }
 
-  .col-1 {
-    flex: 0 0 20%;
-  }
-
-  .col-3-1 {
-    flex: 0 0 72%;
-  }
-
-  [class*='col-'] {
-    float: left;
-    margin-left: 3.33333%;
-    min-height: 1px;
-  }
-  .col-1,
-  .col-1-2,
-  .col-1-4 {
-    width: 20.83333%;
-  }
   .col-2 {
-    width: 44.99999%;
+    flex: 0 0 100%;
   }
-  .col-3 {
-    width: 69.16665%;
+
+  .col-4-1 {
+    flex: 0 0 25%;
   }
-  .col-4 {
-    width: 96.66666%;
+
+  .col-4-3 {
+    flex: 0 0 75%;
   }
+
   h2 {
     font-size: 3em;
     border-bottom: 2px dotted #c80060;
   }
+
   h3 {
     font-size: 2em;
   }
-  div.row {
-    padding: 0;
-  }
+
   nav li,
   nav li:nth-child(even),
   nav li:nth-child(odd) {
@@ -226,6 +211,7 @@ div.row {
     width: auto;
     padding: 0;
   }
+
   nav a {
       padding: 0 1em 0 1em;
   }
